@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Bai+Jamjuree:wght@400;600&family=Josefin+Sans:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Budget App</title>
+</head>
+<body>
+    <!-- Top Container  -->
+    <div class="flex h-[33vh] one items-center justify-center font-alata">
+        <div class="text-center md:max-w-[50%]  space-y-4 ">
+            <p id="dateh" class="text-white md:text-2xl md:font-black tracking-wide"></p>
+            <div id="tot-balance">
+                <p id="total-bal2" class="text-white text-xl bg-red-500"></p>40</p>
+            </div>
+            
+            <div class="flex flex-col items-center space-y-4 ">
+                <div class="flex justify-between bg-cyan-500 w-[80%] p-2.5 md:rounded-lg ">
+                    <p class="text-black ">INCOME</p>
+                    <p id="accrued-income" class="text-white">10</p>
+                </div>
+                <div class="flex justify-between bg-red-400 w-[80%] p-2.5 md:rounded-lg">
+                    <p class="text-black">EXPENSES</p>
+                    <p id="tot-expenses" class="text-white">0</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Lower Container  -->
+    <section id="lower" class="bg-gray-400 font-alata" >
+        <form class="flex p-4 justify-between md:max-w-[60%] 
+        md:mx-auto ">   
+            <select name="zelect" id="selector" class="hidden md:inline rounded-md px-2 outline-none">
+                <option value="add">Add Income</option>
+                <option value="minus">Add Expense</option>
+            </select>
+
+            <input id="item-desc" type="text" placeholder="Add Description" class="w-[70%] md:w-[60%] pl-2 outline-none py-1 md:py-2 rounded-md">
+            <input id="item-amount" type="number" placeholder="Amount" class="w-[25%] md:w-[15%] pl-2 outline-none py-1 md:py-2 rounded-md">
+
+            <button id="form-submit">
+                <img src="tick.png" class="h-[2.5em] rounded-full hidden md:block cursor-pointer">
+            </button>          
+        </form>
+
+        <!-- Mobile View Buttons Container  -->
+        <div class="flex flex-col space-y-4 justify-between py-4 max-w-[70%] md:hidden mx-auto 
+          ">
+            <button id="add-show-inc" class="bg-green-400 text-white py-2 rounded-md md:px-3">
+                ADD/SHOW INCOME
+            </button>
+            <button id="add-show-exp" class="bg-red-400 text-white py-2 rounded-md md:px-3">
+                ADD/SHOW EXPENSES
+            </button>
+        </div>
+
+        <!-- Added Income/Expenses Items Container  -->
+        <div class="bg-white">
+            <div  class="flex flex-col items-center mx-auto space-y-4 md:flex-row 
+            md:max-w-[80%] md:items-start md:justify-between md:space-y-0 md:pt-8 ">
+                <!-- Income Container  -->
+                <div id="ina" class="md:block w-[85%] md:w-[45%] text-center md:pt-4 md:bg-gray-100 ">
+                    <h1 class="font-black text-green-500 text-xl py-2">INCOME</h1>
+                    <div id="income-add-cont">
+                    </div>               
+                </div>
+
+                <!-- Expenses Container  -->
+                <div id="expense-add-cont" class=" w-[85%] md:w-[45%] text-center md:text-left md:pt-4 
+                md:block md:bg-gray-100 ">
+                    <h1 class="font-black text-red-500 text-xl py-2 text-center">EXPENSES</h1>
+                    <div id="expense-add-cont">
+                        <!-- <div class="group flex justify-between shadow-2xl border mb-4 md:px-3 md:py-2.5 
+                        md:rounded-lg ">
+                            <h1 id="item" class="">Website Project</h1>
+                            <div id="right-parent" class="space-x-4 text-red-500 ">
+                                <span id="fig">5000</span>
+                                <span id="percent" class="bg-red-200 ">%</span>
+                                <span class="rounded-full border-red-500 border px-1
+                                hidden group-hover:inline-block cursor-pointer ">X</span>
+                            </div>
+                        </div>               -->
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+
+    <script src="jscript/app.js"></script>
+</body>
+</html>

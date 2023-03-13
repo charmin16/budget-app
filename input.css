@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities; 
+
+.one{
+    /* background-color: red; */
+    background-image: url('/vector-bckgrn1.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.green-border{
+    border: 4px solid green;
+}
+
+.red-border {
+    border: 4px solid red;
+
+}
+
+.sizing{
+    box-sizing: border-box;
+    border: 1px solid green;
+}
+
+#lower{
+    box-sizing: border-box;
+    /* background-color: red; */
+}
+
+form{
+    box-sizing: border-box;
+}
+
+#bgi, #bge{
+    background-color: white;
+    width: 95%;
+    margin-inline: auto;
+}
+
+#total-bal, #total-bal2{
+    color: red;
+    /* font-size: xx-large;
+    letter-spacing: 0.1em; */
+}
+
+
+
+
+
+
+/* @layer base{
+    h1{
+        font-size: 2em;
+        background-color: red;
+        @apply text-3xl (This is an alternative to applying direct css ems)
+    }
+    h2{
+        font-size: 1.5em;
+        background-color: orange;
+    }
+    p{
+        background-color: black;
+        color: white;
+        margin-top: 1em;
+    }
+}
+
+@layer components{
+    .btn-blue{
+        @apply bg-blue-400 py-2 px-4 ml-6 mt-6 rounded-full hover:bg-blue-700 
+        font-bold text-white
+    }
+}
+
+.content-area{
+    background-color: green;
+    @apply bg-green-500
+} */
